@@ -1,0 +1,37 @@
+public class Animal {
+    private String caracteristicas;
+
+    public Animal(String caracteristicas) {
+        this.caracteristicas = caracteristicas;
+    }
+   public String getCaracteristicas() {
+        return caracteristicas;
+    }
+
+    public void setCaracteristicas(String caracteristicas) {
+        this.caracteristicas = caracteristicas;
+    }
+}
+
+class Mamifero extends Animal {
+    private String alimento;
+
+    public Mamifero(String caracteristicas, String alimento) {
+        super(caracteristicas);
+        this.alimento = alimento;
+    }
+
+    public String getAlimento() {
+        return alimento;
+    }
+
+    public void setAlimento(String alimento) {
+        this.alimento = alimento;
+    }
+
+    public static void main(String[] args) {
+        Mamifero gato = new Mamifero("Gato", "Pelo");
+        System.out.println(gato.getCaracteristicas());
+        System.out.println(gato.getAlimento());
+    }
+}
