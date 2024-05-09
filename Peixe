@@ -1,0 +1,42 @@
+class Peixe extends Animal {
+    private String cor;
+
+    public Peixe(String caracteristicas, String cor) {
+        super(caracteristicas);
+        this.cor = cor;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+    public String toString() {
+        return "Peixe{" +
+                "caracteristicas='" + getCaracteristicas() + '\'' +
+                ", cor='" + cor + '\'' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        Peixe peixe = new Peixe("Vive no aquário", "Dourada");
+        System.out.println(peixe.toString());
+    }
+}
+public class Animal {
+    private String caracteristicas;
+
+    public Animal(String caracteristicas) {
+        this.caracteristicas = caracteristicas;
+    }
+
+    public String getCaracteristicas() {
+        return caracteristicas;
+    }
+
+    public void setCaracteristicas(String caracteristicas) {
+        this.caracteristicas = caracteristicas;
+    }
+}
